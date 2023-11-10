@@ -6,14 +6,17 @@ const axiosClient = axios.create({
 
 axiosClient.interceptors.request.use(
   (config) => {
-    // const accessToken = JSON.parse(localStorage.getItem("accessToken") || "");
-    // if (accessToken) {
-    //   if (config.headers) {
-    //     config.headers.Authorization = accessToken;
-    //   }
-    // }
+    const memberId = localStorage.getItem("memberId");
 
-    console.log(`Request: ${config.method?.toUpperCase()} ${config.url}`);
+    if (memberId) {
+      if (config.data) {
+        config.data.loginMemberId = memberId;
+      }
+    }
+    config.headers["Content-Type"] = "application/json";
+    config.headers.Accept = "application/json";
+
+    console.log(`Request: ${config.method?.toUpperCase()} ${config.url} ${JSON.stringify(config.data)}`);
 
     return config;
   },
@@ -26,7 +29,7 @@ axiosClient.interceptors.request.use(
 axiosClient.interceptors.response.use(
   (response) => {
     if (response.status < 500) {
-      console.log(`Response: ${response.config.method?.toUpperCase()} ${response.config.url} ${response.status}`);
+      console.log(`Response: ${response.config.method?.toUpperCase()} ${response.config.url} ${response.status} ${response.data}`);
       console.log(response.data);
     } else {
       console.error(`Response: ${response.request.method.toUpperCase()} ${response.request.url} ${response.status}`);
