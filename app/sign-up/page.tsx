@@ -99,21 +99,21 @@ const SignUp = () => {
                   <button
                     value={ageValue.teenagers}
                     onClick={handleChangeAge}
-                    className={`px-7 py-1 mr-4 rounded-full w-22 ${age === ageValue.teenagers ? "" : buttonNotClickedStyle}`}
+                    className={`px-4 py-1 mr-4 rounded-full ${age === ageValue.teenagers ? "" : buttonNotClickedStyle}`}
                   >
                     10대
                   </button>
                   <button
                     value={ageValue.twenties}
                     onClick={handleChangeAge}
-                    className={`px-7 py-1 mr-4 rounded-full w-22 ${age === ageValue.twenties ? "" : buttonNotClickedStyle}`}
+                    className={`px-4 py-1 mr-4 rounded-full ${age === ageValue.twenties ? "" : buttonNotClickedStyle}`}
                   >
                     20대
                   </button>
                   <button
                     value={ageValue.thirties}
                     onClick={handleChangeAge}
-                    className={`px-7 py-1 mr-4 rounded-full w-22 ${age === ageValue.thirties ? "" : buttonNotClickedStyle}`}
+                    className={`px-4 py-1 mr-4 rounded-full ${age === ageValue.thirties ? "" : buttonNotClickedStyle}`}
                   >
                     30대
                   </button>
@@ -122,21 +122,21 @@ const SignUp = () => {
                   <button
                     value={ageValue.fourties}
                     onClick={handleChangeAge}
-                    className={`px-5 py-1 mr-4 rounded-full w-22 ${age === ageValue.fourties ? "" : buttonNotClickedStyle}`}
+                    className={`px-4 py-1 mr-4 rounded-full ${age === ageValue.fourties ? "" : buttonNotClickedStyle}`}
                   >
                     40대
                   </button>
                   <button
                     value={ageValue.fifities}
                     onClick={handleChangeAge}
-                    className={`px-5 py-1 mr-4 rounded-full w-22 ${age === ageValue.fifities ? "" : buttonNotClickedStyle}`}
+                    className={`px-4 py-1 mr-4 rounded-full ${age === ageValue.fifities ? "" : buttonNotClickedStyle}`}
                   >
                     50대
                   </button>
                   <button
                     value={ageValue.sixties}
                     onClick={handleChangeAge}
-                    className={`px-5 py-1 mr-4 rounded-full w-22 ${age === ageValue.sixties ? "" : buttonNotClickedStyle}`}
+                    className={`px-4 py-1 mr-4 rounded-full ${age === ageValue.sixties ? "" : buttonNotClickedStyle}`}
                   >
                     60대 이상
                   </button>
