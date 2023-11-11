@@ -7,7 +7,7 @@ type HotCardProps = {
 
 const HotCard = ({ title, contents }: HotCardProps) => {
   if (title.length > 15) {
-    title = title.slice(0, 15) + "...";
+    title = title.slice(0, 10) + "...";
   }
   if (contents.length > 50) {
     contents = contents.slice(0, 30) + "...";
